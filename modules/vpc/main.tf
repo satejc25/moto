@@ -72,7 +72,7 @@ resource "aws_route_table_association" "private_subnet_association" {
 resource "aws_security_group" "motogp-sg" {
     name = "${var.project}-vpc"
     description = "allow inbound and outbound traffic"
-    vpc_id = aws_vpc.moto_vpc.arn
+    vpc_id = aws_vpc.moto_vpc.id
     tags = {
      Name = "allow_tls"
   }

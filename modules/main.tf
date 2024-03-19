@@ -33,8 +33,8 @@ module "motogp-vpc-module" {
     public_subnet_1a = var.public_subnet_1a
     avalability_zone_1a = var.avalability_zone_1a
     private_subnet_1a = var.private_subnet_1a
-    sg_vpc_id = var.sg_vpc_id
-    cidr_ipv4_block = var.cidr_ipv4_block
+    cidr_ipv4_block = var.cidr_block
+
 }
 
 module "ec2" {
@@ -43,6 +43,7 @@ module "ec2" {
     key_name_global = var.key_name_global
     instance_type_mgp = var.instance_type_mgp
     subnet_id_mgp = module.motogp-vpc-module.public_subnet_id
+    vpc_security_group_ids = module.motogp-vpc-module.vpc_id
     project = var.project
     Environment = var.Environment
 
