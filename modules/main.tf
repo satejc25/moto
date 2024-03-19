@@ -34,3 +34,14 @@ module "motogp-vpc-module" {
     avalability_zone_1a = var.avalability_zone_1a
     private_subnet_1a = var.private_subnet_1a
 }
+
+module "ec2-mgp" {
+    source = "./instance"
+    ami_id = var.ami_id
+    key_name_global = var.key_name_global
+    instance_type_mgp = var.instance_type_mgp
+    subnet_id_mgp = module.motogp-vpc-module.public_subnet_id
+    project = var.project
+    Environment = var.Environment
+
+}
