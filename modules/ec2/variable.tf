@@ -6,8 +6,6 @@ variable "instance_type_mgp" {}
 
 variable "subnet_id_mgp" {}
 
-variable "vpc_security_group_ids_motogp" {}
-
 variable "project" {}
 
 variable "Environment" {} 
