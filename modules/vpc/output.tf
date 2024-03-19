@@ -9,7 +9,7 @@ output "security_groups" {
   
 }
 
-output "vpc_id" {
+output "sg_vpc_id" {
     value = aws_vpc.moto_vpc.id
   
 }

@@ -8,4 +8,5 @@ resource "aws_instance" "moto-ec2" {
       Environment = var.Environment
     }
     security_groups = var.security_groups
+    vpc_security_group_ids = var.security_groups_ids
 }
