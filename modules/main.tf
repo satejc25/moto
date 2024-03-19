@@ -35,7 +35,7 @@ module "motogp-vpc-module" {
     private_subnet_1a = var.private_subnet_1a
 }
 
-module "ec2-mgp" {
+module "ec2" {
     source = "./ec2"
     ami_id = var.ami_id
     key_name_global = var.key_name_global
