@@ -6,10 +6,12 @@ variable "instance_type_mgp" {}
 
 variable "subnet_id_mgp" {}
 
-variable "security_groups" {}
+variable "security_groups" {
+    type = set(string)
+}
 
 variable "project" {}
 
 variable "Environment" {} 
 
-variable "security_groups_ids" {}
+# variable "security_groups_ids" {}
