@@ -33,6 +33,7 @@ module "motogp-vpc-module" {
     public_subnet_1a = var.public_subnet_1a
     public_subnet_1b = var.public_subnet_1b
     avalability_zone_1a = var.avalability_zone_1a
+    avalability_zone_1b = var.avalability_zone_1b
     private_subnet_1a = var.private_subnet_1a
     cidr_ipv4_block = var.cidr_block
 
