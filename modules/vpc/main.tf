@@ -1,3 +1,4 @@
+
 resource "aws_vpc" "moto_vpc" {
     cidr_block = var.cidr_block
     tags = {
