@@ -1,15 +1,15 @@
 
-output "public_subnet_id" {
+output "public_subnet_id" {                  #here in output block "public_subnet_id" is random name which is known as output name. By using value we have printed public subnet id.  
     value = aws_subnet.public_subnet.id
   
 }
 
-output "public_subnet_idb" {
+output "public_subnet_idb" {                #here also subnet id is printed
     value = aws_subnet.public_subnet_b.id
   
 }
 
-output "security_groups" {
+output "security_groups" {                  #here security group id is printed
     value = aws_security_group.motogp-sg.id
   
 }

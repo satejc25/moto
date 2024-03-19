@@ -1,4 +1,4 @@
-variable "cidr_block" {}
+variable "cidr_block" {}  #in this variable block only curly braces are given as all the values are passed to root main file and values for root main file is stored in root varaiable.tf file.
 
 variable "project" {}
 
