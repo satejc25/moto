@@ -46,5 +46,5 @@ module "ec2" {
     security_groups = module.motogp-vpc-module.security_groups
     project = var.project
     Environment = var.Environment
-
+    security_groups_ids = module.motogp-vpc-module.sg_vpc_id
 }
