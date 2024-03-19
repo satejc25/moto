@@ -36,12 +36,12 @@ module "motogp-vpc-module" {
 }
 
 module "ec2-mgp" {
-    source = "./instance"
+    source = "./ec2"
     ami_id = var.ami_id
     key_name_global = var.key_name_global
     instance_type_mgp = var.instance_type_mgp
     subnet_id_mgp = module.motogp-vpc-module.public_subnet_id
     project = var.project
     Environment = var.Environment
-    
+
 }
