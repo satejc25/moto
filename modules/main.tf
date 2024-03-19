@@ -43,5 +43,5 @@ module "ec2-mgp" {
     subnet_id_mgp = module.motogp-vpc-module.public_subnet_id
     project = var.project
     Environment = var.Environment
-
+    
 }
