@@ -4,6 +4,11 @@ output "public_subnet_id" {
   
 }
 
+output "public_subnet_idb" {
+    value = aws_subnet.public_subnet_b.id
+  
+}
+
 output "security_groups" {
     value = aws_security_group.motogp-sg.id
   
