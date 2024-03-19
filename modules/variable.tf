@@ -63,6 +63,13 @@ variable "avalability_zone_1a" {
   
 }
 
+variable "avalability_zone_1b" {
+    description = "avalability of vpc"
+    type = string
+    default = "us-east-2b"
+  
+}
+
 variable "ami_id" {
     description = "ami-id of ubuntu instance"
     type = string
