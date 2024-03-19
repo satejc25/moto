@@ -14,5 +14,7 @@ variable "security_groups_mg" {}
 
 variable "subnets_mg" {}
 
+variable "subnets2_mg" {}
+
 variable "Environment" {}
 

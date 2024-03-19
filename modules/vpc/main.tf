@@ -38,6 +38,16 @@ resource "aws_subnet" "public_subnet" {
     }
 }
 
+resource "aws_subnet" "public_subnet_b" {
+    vpc_id = aws_vpc.moto_vpc.id
+    cidr_block = var.public_subnet_1b
+    availability_zone = var.avalability_zone_1a
+    map_public_ip_on_launch = true
+    tags = {
+      Name = "Public-Subnet-1-Motogp"
+    }
+}
+
 resource "aws_subnet" "private_subnet" {
   vpc_id = aws_vpc.moto_vpc.id
   cidr_block = var.private_subnet_1a
