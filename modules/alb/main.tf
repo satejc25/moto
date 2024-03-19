@@ -9,8 +9,9 @@ resource "aws_alb_target_group" "motogp-tg" {
       enabled = true
       healthy_threshold = 3
       interval = 10
-      matcher = "/"
-      port = 80
+      matcher = 200
+      path = "/"
+      port = "traffic-port"
       protocol = var.protocol_tg
       timeout = 3
       unhealthy_threshold = 2
@@ -34,7 +35,7 @@ resource "aws_lb" "motogp-lb" {
     internal = false
     load_balancer_type = var.load_balancer_type
     security_groups = var.security_groups_mg
-    subnets = var.subnets_mg
+    subnets = [var.subnets_mg , var.subnets2_mg]
     enable_deletion_protection = false
     tags = {
       Environment = var.Environment
