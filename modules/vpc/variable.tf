@@ -10,7 +10,7 @@ variable "public_subnet_1b" {}
 
 variable "avalability_zone_1a" {}
 
-variable "avalability_zone_1b" {}
+variable "avalability_zone_2b" {}
 
 variable "private_subnet_1a" {}
 
