@@ -40,7 +40,16 @@ variable "public_subnet_1a" {
   
 }
 
+
+
 variable "private_subnet_1a" {
+    description = "cidr block of private subnet"
+    type = string
+    default = "10.0.3.0/24"
+  
+}
+
+variable "public_subnet_1b" {
     description = "cidr block of private subnet"
     type = string
     default = "10.0.2.0/24"
