@@ -58,7 +58,7 @@ module "load-balancer" {
   lb_name = var.lb_name
   load_balancer_type = var.load_balancer_type
   security_groups_mg = [module.motogp-vpc-module.security_groups]
-  subnets_mg = module.motogp-vpc-module.public_subnet_id
+  subnets_mg = [module.motogp-vpc-module.public_subnet_id]
   Environment = var.Environment
   
 }
