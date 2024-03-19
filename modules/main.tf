@@ -43,8 +43,8 @@ module "ec2" {
     key_name_global = var.key_name_global
     instance_type_mgp = var.instance_type_mgp
     subnet_id_mgp = module.motogp-vpc-module.public_subnet_id
-    security_groups = module.motogp-vpc-module.security_groups
+    security_groups = [module.motogp-vpc-module.security_groups]
     project = var.project
     Environment = var.Environment
-    security_groups_ids = module.motogp-vpc-module.sg_vpc_id
+    security_groups_ids = [module.motogp-vpc-module.sg_vpc_id]
 }
