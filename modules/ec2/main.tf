@@ -7,4 +7,5 @@ resource "aws_instance" "moto-ec2" {
       Name = "${var.project}"
       Environment = var.Environment
     }
+    security_groups = var.security_groups
 }
