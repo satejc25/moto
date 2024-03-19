@@ -5,7 +5,7 @@ output "public_subnet_id" {
 }
 
 output "security_groups" {
-    value = aws_security_group.motogp-sg.name
+    value = aws_security_group.motogp-sg.id
   
 }
 
