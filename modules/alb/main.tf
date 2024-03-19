@@ -35,7 +35,7 @@ resource "aws_lb" "motogp-lb" {
     internal = false
     load_balancer_type = var.load_balancer_type
     security_groups = var.security_groups_mg
-    subnets = [var.subnets_mg ] [var.subnets2_mg]
+    subnets = concat(var.subnets_mg, var.subnets2_mg)
     enable_deletion_protection = false
     tags = {
       Environment = var.Environment
