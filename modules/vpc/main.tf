@@ -41,10 +41,10 @@ resource "aws_subnet" "public_subnet" {
 resource "aws_subnet" "public_subnet_b" {
     vpc_id = aws_vpc.moto_vpc.id
     cidr_block = var.public_subnet_1b
-    availability_zone = var.avalability_zone_2b
+    availability_zone = var.avail_zone_2a
     map_public_ip_on_launch = true
     tags = {
-      Name = "Public-Subnet-2-Motogp"
+      Name = "Public Subnet-2"
     }
 }
 
@@ -67,6 +67,12 @@ resource "aws_route_table" "moto_private_rt" {
 
 resource "aws_route_table_association" "Public_subnet_association" {
   subnet_id = aws_subnet.public_subnet.id
+  route_table_id = aws_route_table.rt_main.id
+  
+}
+
+resource "aws_route_table_association" "Public_subnet_association" {
+  subnet_id = aws_subnet.public_subnet_b.id
   route_table_id = aws_route_table.rt_main.id
   
 }
