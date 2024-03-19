@@ -48,3 +48,10 @@ module "ec2" {
     Environment = var.Environment
     # security_groups_ids = [module.motogp-vpc-module.sg_vpc_id]
 }
+
+module "s3" {
+    source = "./s3"
+    bucket = var.bucket
+    project = var.project
+    Environment = var.Environment  
+}
