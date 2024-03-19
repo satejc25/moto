@@ -54,6 +54,10 @@ variable "avalability_zone_1a" {
   
 }
 
+variable "sg_vpc_id" {
+  
+}
+
 variable "ami_id" {
     description = "ami-id of ubuntu instance"
     type = string
