@@ -74,3 +74,10 @@ variable "key_name_global" {
     default = "windows_global_key"
   
 }
+
+variable "bucket" {
+    description = "Bucket Name"
+    type = string
+    default = "MotoGP-Buckett"
+  
+}
