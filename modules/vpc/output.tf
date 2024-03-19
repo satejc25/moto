@@ -4,7 +4,7 @@ output "public_subnet_id" {
   
 }
 
-output "vpc_security_group_ids" {
+output "security_groups" {
     value = aws_security_group.motogp-sg.id
   
 }
