@@ -1,5 +1,5 @@
 
-resource "aws_vpc" "moto_vpc" {
+resource "aws_vpc" "moto_vpc" {                   #resource block is used to declare variables within scope. Syntax for resource block is  {{resource "aws_service" "reference_name"}}. to call one resource id into another resource within scope is done by {{aws_service.reference_name.id/arn/name}}
     cidr_block = var.cidr_block
     tags = {
       Name = "${var.project}-vpc"

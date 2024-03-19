@@ -1,4 +1,4 @@
-variable "region" {
+variable "region" {                           #here in all variable blocks variable name is provided and value for that name is given. 
     description = "region "
     type = string
     default = "us-east-2"
