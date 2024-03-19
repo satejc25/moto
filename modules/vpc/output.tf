@@ -13,8 +13,3 @@ output "vpc_id" {
     value = aws_vpc.moto_vpc.id
   
 }
-
-output "security_vpc_id" {
-    value = aws_security_group.motogp-sg.vpc_id
-  
-}
