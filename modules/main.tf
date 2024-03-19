@@ -31,6 +31,7 @@ module "motogp-vpc-module" {
     project = var.project
     Environment = var.Environment
     public_subnet_1a = var.public_subnet_1a
+    public_subnet_1b = var.public_subnet_1b
     avalability_zone_1a = var.avalability_zone_1a
     private_subnet_1a = var.private_subnet_1a
     cidr_ipv4_block = var.cidr_block
@@ -59,6 +60,7 @@ module "load-balancer" {
   load_balancer_type = var.load_balancer_type
   security_groups_mg = [module.motogp-vpc-module.security_groups]
   subnets_mg = [module.motogp-vpc-module.public_subnet_id]
+  subnets2_mg = [module.motogp-vpc-module.public_subnet_idb]
   Environment = var.Environment
   
 }
