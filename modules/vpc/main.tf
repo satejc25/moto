@@ -66,3 +66,8 @@ resource "aws_route_table_association" "private_subnet_association" {
   route_table_id = aws_route_table.moto_private_rt.id
   
 }
+
+output "public_subnet_id" {
+    value = aws_subnet_public_subnet.id
+  
+}
