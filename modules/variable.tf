@@ -63,7 +63,7 @@ variable "avalability_zone_1a" {
   
 }
 
-variable "avalability_zone_2b" {
+variable "avail_zone_2a" {
     description = "avalability of vpc"
     type = string
     default = "us-east-2b"
