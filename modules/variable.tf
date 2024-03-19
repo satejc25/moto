@@ -81,3 +81,32 @@ variable "bucket" {
     default = "MotoGP-Buckett"
   
 }
+
+variable "tg_name" {
+    description = "target group name"
+    type = string
+    default = "MotoGP-TG"
+  
+}
+
+variable "protocol_tg" {
+    description = "protocol used in tg"
+    type = string
+    default = "http"
+  
+}
+
+variable "lb_name" {
+    description = "load balancer name"
+    type = string
+    default = "MotoGP-ALB"
+
+  
+}
+
+variable "load_balancer_type" {
+    description = "type of load balancer"
+    type = string
+    default = "application"
+  
+}

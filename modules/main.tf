@@ -49,6 +49,19 @@ module "ec2" {
     # security_groups_ids = [module.motogp-vpc-module.sg_vpc_id]
 }
 
+module "load-balancer" {
+  source = "./alb"
+  tg_name = var.tg_name
+  protocol_tg = var.protocol_tg
+  vpc_id_tg = module.motogp-vpc-module.sg_vpc_id
+  target_id_ec2 = module.ec2.instance_id
+  lb_name = var.lb_name
+  load_balancer_type = var.load_balancer_type
+  security_groups_mg = [module.motogp-vpc-module.security_groups]
+  subnets_mg = module.motogp-vpc-module.public_subnet_id
+  Environment = var.Environment
+  
+}
 module "s3" {
     source = "./s3"
     bucket = var.bucket
