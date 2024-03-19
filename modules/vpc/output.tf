@@ -5,11 +5,16 @@ output "public_subnet_id" {
 }
 
 output "security_groups" {
-    value = aws_security_group.motogp-sg.id
+    value = aws_security_group.motogp-sg.name
   
 }
 
 output "vpc_id" {
     value = aws_vpc.moto_vpc.id
+  
+}
+
+output "security_vpc_id" {
+    value = aws_security_group.motogp-sg.vpc_id
   
 }
