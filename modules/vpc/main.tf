@@ -68,6 +68,6 @@ resource "aws_route_table_association" "private_subnet_association" {
 }
 
 output "public_subnet_id" {
-    value = aws_subnet_public_subnet.id
+    value = aws_subnet.public_subnet.id
   
 }
