@@ -78,7 +78,7 @@ variable "key_name_global" {
 variable "bucket" {
     description = "Bucket Name"
     type = string
-    default = "MotoGP-Buckett"
+    default = "motogp-buckett"
   
 }
 
