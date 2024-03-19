@@ -53,3 +53,24 @@ variable "avalability_zone_1a" {
     default = "us-east-2a"
   
 }
+
+variable "ami_id" {
+    description = "ami-id of ubuntu instance"
+    type = string
+    default = "ami-0b8b44ec9a8f90422"
+  
+}
+
+variable "instance_type_mgp" {
+    description = "type of instance is described"
+    type = string
+    default = "t2.micro"
+  
+}
+
+variable "key_name_global" {
+    description = "key value pair to take ssh"
+    type = string
+    default = "windows_global_key"
+  
+}
