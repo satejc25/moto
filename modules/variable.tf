@@ -92,7 +92,7 @@ variable "tg_name" {
 variable "protocol_tg" {
     description = "protocol used in tg"
     type = string
-    default = "http"
+    default = "HTTP"
   
 }
 
