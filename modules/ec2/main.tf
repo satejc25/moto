@@ -1,4 +1,5 @@
 resource "aws_instance" "moto-ec2" {
+  count = var.count
     ami = var.ami_id
     key_name = var.key_name_global
     instance_type = var.instance_type_mgp
