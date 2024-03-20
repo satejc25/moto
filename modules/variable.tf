@@ -70,10 +70,11 @@ variable "avail_zone_2a" {
   
 }
 
-variable "count" {
+variable "instance_count" {
     description = "count of ec2s"
     type = string
     default = "2"
+  
 }
 
 variable "ami_id" {
