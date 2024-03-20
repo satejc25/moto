@@ -1,5 +1,7 @@
 variable "ami_id" {}
 
+variable "count" {}
+
 variable "key_name_global" {}
 
 variable "instance_type_mgp" {}
