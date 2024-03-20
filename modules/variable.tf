@@ -72,6 +72,7 @@ variable "avail_zone_2a" {
 
 variable "count" {
     description = "count of ec2s"
+    type = string
     default = "2"
 }
 
