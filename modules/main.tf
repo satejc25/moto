@@ -41,7 +41,7 @@ module "motogp-vpc-module" {                #we can put our code in module block
 
 module "ec2" {
     source = "./ec2"
-    instance_count = var.count
+    instance_count = var.instance_count
     ami_id = var.ami_id
     key_name_global = var.key_name_global
     instance_type_mgp = var.instance_type_mgp
