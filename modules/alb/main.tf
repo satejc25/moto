@@ -22,8 +22,9 @@ resource "aws_alb_target_group" "motogp-tg" {
 #attaching tg to aws instance
 
 resource "aws_lb_target_group_attachment" "motogp-tg-attach" {
+    count = length(var.target_id_ec2)
     target_group_arn = aws_alb_target_group.motogp-tg.id
-    target_id = var.target_id_ec2 #mention ec2 id
+    target_id = var.target_id_ec2[count.index] #mention ec2 id
     port = 80
   
 }
