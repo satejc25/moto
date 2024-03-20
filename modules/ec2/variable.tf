@@ -1,6 +1,6 @@
 variable "ami_id" {}
 
-variable "count" {}
+variable "instance_count" {}
 
 variable "key_name_global" {}
 
